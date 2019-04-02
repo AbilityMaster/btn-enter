@@ -1,0 +1,68 @@
+$color: #4513ab;
+
+body {
+	background: #000;
+}
+.btn-enter {
+	position: relative;
+	//background: #4573ab;
+	width: 200px;
+	height: 140px;
+	&::before {
+		content: "";
+		display: block;
+		width: 10px;
+		height: 10px;
+		top: 0;
+		right: 0;
+		position: absolute;
+		width: 80px;
+		height: 100%;
+		background: $color;
+		border-radius: 10px;
+	}
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		border-radius: 10px;
+		bottom: 70px;
+		left: 40px;
+		box-shadow: 20px 20px 0 0 $color;
+	}
+	&__icon {
+		position: absolute;
+		background: $color;
+		height: 70px;
+		width: 100%;
+		border-radius: 10px;
+		position: absolute;
+		bottom: 0;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border-top: 3px solid #fff;
+			border-left: 3px solid #fff;
+			transform: rotate(-45deg);
+			bottom: 30px;
+			left: 46px;
+		}		
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 110px;
+			height: 50px;
+			border-bottom: 3px solid #fff;
+			border-right: 3px solid #fff;
+			border-radius: 0 0 10px 0;
+			right: 40px;
+			bottom: 35px;
+		}
+	}
+}
